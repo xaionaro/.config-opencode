@@ -1,0 +1,19 @@
+{
+  "$schema": "https://opencode.ai/schemas/config.json",
+    "compaction": {
+    "auto": true,
+    "prune": true
+  },
+  "agent": {
+    "compaction": {
+      "mode": "subagent",
+      "model": "github-copilot/gpt-5-mini",
+      "steps": 1,
+      "temperature": 0.0,
+      "disable": false
+    }
+  },
+  "experimental": {
+    "continue_loop_on_deny": true
+  }
+}
