@@ -11,6 +11,13 @@
     }
   },
   "agent": {
+    "compaction": {
+      "mode": "subagent",
+      "model": "github-copilot/gpt-5-mini",
+      "steps": 1,
+      "temperature": 0.0,
+      "disable": false
+    },
     "fixer-autonomous": {
       "mode": "primary",
       "description": "Autonomous fixer: iterate until the task is verifiably done.",
@@ -25,10 +32,12 @@
       "description": "Autonomous fixer: iterate until the task is verifiably done.",
       "temperature": 0.1,
       "prompt": "{file:./prompts/fixer-autonomous.txt}"
-      ,
-      "permission": {
-        "question": "allow"
-      }
+    },
+    "reproducer-autonomous": {
+      "mode": "subagent",
+      "description": "Autonomous reproducer: try to build a repro for a failure.",
+      "temperature": 0.1,
+      "prompt": "{file:./prompts/reproducer-autonomous.txt}"
     }
   },
   "experimental": {
