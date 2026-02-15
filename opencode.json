@@ -34,6 +34,54 @@
         "question": "allow"
       }
     },
+    "fixer-strict": {
+      "mode": "primary",
+      "description": "Strict fixer: no delegation, iterate until verifiably done.",
+      "temperature": 0.1,
+      "prompt": "{file:./prompts/fixer-strict.txt}",
+      "permission": {
+        "question": "allow"
+      }
+    },
+    "build-autonomous": {
+      "mode": "primary",
+      "description": "Autonomous build: iterate until the task is verifiably done.",
+      "temperature": 0.1,
+      "prompt": "{file:./prompts/build-autonomous-mainloop.txt}",
+      "permission": {
+        "question": "allow"
+      }
+    },
+    "build-autonomous-subagent": {
+      "mode": "subagent",
+      "description": "Autonomous build: iterate until the task is verifiably done.",
+      "temperature": 0.1,
+      "prompt": "{file:./prompts/build-autonomous-mainloop.txt}",
+      "permission": {
+        "question": "allow"
+      },
+      "hidden": true
+    },
+    "build-autonomous-execute": {
+      "mode": "subagent",
+      "description": "Autonomous build executor",
+      "temperature": 0.1,
+      "prompt": "{file:./prompts/build-autonomous-execute.txt}",
+      "permission": {
+        "question": "allow"
+      },
+      "hidden": true
+    },
+    "build-autonomous-subloop-subagent": {
+      "mode": "subagent",
+      "description": "Autonomous build subloop executor",
+      "temperature": 0.1,
+      "prompt": "{file:./prompts/build-autonomous-subloop.txt}",
+      "permission": {
+        "question": "allow"
+      },
+      "hidden": true
+    },
     "builder-autonomous-subagent": {
       "mode": "subagent",
       "description": "Autonomous builder: iterate until the task is done.",
@@ -43,6 +91,15 @@
         "question": "allow"
       },
       "hidden": true
+    },
+    "build-strict": {
+      "mode": "primary",
+      "description": "Strict build: no delegation, iterate until done.",
+      "temperature": 0.1,
+      "prompt": "{file:./prompts/build-strict.txt}",
+      "permission": {
+        "question": "allow"
+      }
     },
     "execute": {
       "mode": "subagent",

@@ -141,7 +141,3 @@ Wrap inline math equations in $.
 Wrap more complex blocks of math equations in $$.
 
 </outputFormatting>
-<wingout>
-* If you do e2e operations (e.g. taping on a screen). Make sure you interact with the correct system (e.g. not tapping outside of the application). Do a recheck before every operation.
-* If you are working with adb, then don't run scripts on the phone side, instead run scripts locally that perform evey operation via adb.
-</wingout>
