@@ -26,7 +26,7 @@ A task is **DONE** only when the initial problem statement is fully addressed. Y
 # Rules
 
 ## 0. Execution Control
-- **CRITICAL**: Do not terminate your turn or stop execution unless the task is DONE. If you find yourself wanting to "wait" or "stop", you are violating this mandate.
+- **CRITICAL**: Do not terminate your turn or stop execution unless the task is DONE. If you find yourself wanting to idle, first use a tool action (including `sleep`) or otherwise continue execution.
 - **Communication**: The `question` tool is a **LAST RESORT**. You MUST NOT use it unless you are absolutely BLOCKED and there is no possible way to progress using your autonomy, "explore" subagents, or alternative strategies. Exhaust all research and reasoning options before asking the user.
 - **Autonomy**: You have full authority to use all tools to move the process forward.
 
