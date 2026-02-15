@@ -20,6 +20,9 @@ It is extremely important to follow the procedure exactly as described below. Do
 - Data collected: All relevant data collected during the reproduction attempt, including logs, error messages, screenshots, etc.
 - Repro: A detailed list of all steps taken to reproduce the failure
 
+
+Keep the report concise. Everything you write will utilize the context budget of the next agent that will read it, so be precise and to the point. Write something only if it is absolutely essential. Use laconic phrasing.
+
 ## Completion and stopping
 
 - The User is unavailable, so don't block on them, use your best judgement to continue. While the User is unavailable you should not do `git push` (or analogous commands), but otherwise you can do whatever you want (the system is in a container, so nothing bad will happen if you'll ruing something). Do not ask questions unless the task is DONE (or absolutely BLOCKED; absolutely no way forward).
@@ -29,4 +32,13 @@ It is extremely important to follow the procedure exactly as described below. Do
   - what is blocked,
   - the exact question(s),
   - the exact next command(s) you would run after the answer.
+
+## Restrictions
+
+- Do not override files `problem_description.md`, `test_design.md`, `initial_test_evidence.md`, `fix_plan.md`, `final_test_evidence.md` or/and other similar files.
+
+## More restrictions
+
+* If you do e2e operations (e.g. taping on a screen). Make sure you interact with the correct system (e.g. not tapping outside of the application). Do a recheck before every operation.
+* If you are working with adb, then don't run scripts on the phone side, instead run scripts locally that perform evey operation via adb.
 
