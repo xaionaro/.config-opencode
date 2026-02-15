@@ -24,14 +24,6 @@
     }
   },
   "agent": {
-    "compaction": {
-      "mode": "subagent",
-      "model": "openai/gpt-5.2-codex",
-      "reasoningEffort": "xHigh",
-      "steps": 1,
-      "temperature": 0.0,
-      "disable": false
-    },
     "fixer-autonomous": {
       "mode": "primary",
       "description": "Autonomous fixer: iterate until the task is verifiably done.",
@@ -39,14 +31,16 @@
       "prompt": "{file:./prompts/fixer-autonomous-mainloop.txt}",
       "permission": {
         "question": "allow"
-      },
-      "reasoningEffort": "xHigh"
+      }
     },
     "builder-autonomous-subagent": {
       "mode": "subagent",
       "description": "Autonomous builder: iterate until the task is done.",
       "temperature": 0.1,
       "prompt": "{file:./prompts/builder-autonomous.txt}",
+      "permission": {
+        "question": "allow"
+      },
       "hidden": true
     },
     "execute": {
@@ -61,7 +55,9 @@
       "description": "Autonomous fixer: iterate until the fix is verifiably done.",
       "temperature": 0.1,
       "prompt": "{file:./prompts/fixer-autonomous-mainloop.txt}",
-      "reasoningEffort": "xHigh",
+      "permission": {
+        "question": "allow"
+      },
       "hidden": true
     },
     "fixer-autonomous-execute": {
@@ -69,7 +65,9 @@
       "description": "Autonomous fixer executor",
       "temperature": 0.1,
       "prompt": "{file:./prompts/fixer-autonomous-execute.txt}",
-      "reasoningEffort": "xHigh",
+      "permission": {
+        "question": "allow"
+      },
       "hidden": true
     },
     "fixer-autonomous-subloop-subagent": {
@@ -77,14 +75,18 @@
       "description": "Autonomous fixer subloop executor",
       "temperature": 0.1,
       "prompt": "{file:./prompts/fixer-autonomous-subloop.txt}",
-      "reasoningEffort": "xHigh",
+      "permission": {
+        "question": "allow"
+      },
       "hidden": true
     },
     "reproducer-autonomous": {
       "mode": "subagent",
       "description": "Autonomous reproducer: try to build a repro for a failure.",
       "temperature": 0.1,
-      "reasoningEffort": "xHigh",
+      "permission": {
+        "question": "allow"
+      },
       "prompt": "{file:./prompts/reproducer-autonomous.txt}"
     }
   },
